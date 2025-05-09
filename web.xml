@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+   version="6.0">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <listener>
+        <listener-class>com.example.MyAppListener</listener-class>
+    </listener>
+
+    <!-- Your other configurations here -->
+</web-app>
+<servlet>
+    <servlet-name>Searching_trains</servlet-name>
+    <servlet-class>Myservlets.Searching_trains</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>Searching_trains</servlet-name>
+    <url-pattern>/search-trains</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>Sorting_trains</servlet-name>
+    <servlet-class>Myservlets.Sorting_trains</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>Sorting_trains</servlet-name>
+    <url-pattern>/Sorting_trains</url-pattern>
+</servlet-mapping>
+</web-app>
